@@ -7,9 +7,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="resources/css/normalize.min.css">
   <style>
+    html, body {
+      height: 100%;
+    }
+
     body {
       font-family: Montserrat, sans-serif;
       background: #f5f5f5;
+    }
+
+    .container-all {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .container-main {
+      flex: 1;
     }
 
     .container {
@@ -64,28 +78,32 @@
   </style>
 </head>
 <body>
-  <div class="header-info container">
-    <span>(13) 97405-0881</span>
-    <span>Rua Campos Melo, nº 157 - Cj 1409, Santos - SP</span>
-  </div>
-  <header class="container">
-    <h1 class="logo">
-      <img src="resources/img/logo.png">
-    </h1>
-    <div>Hmb</div>
-  </header>
-  <div class="sticky-footer">
-    <div>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3646.3589187947027!2d-46.32204203530973!3d-23.9477450818586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce039eb070c3d5%3A0x9400d3dd4983c451!2sR.%20Campos%20Melo%2C%20157%20-%20Vila%20Matias%2C%20Santos%20-%20SP%2C%2011015-150!5e0!3m2!1spt-BR!2sbr!4v1600780410961!5m2!1spt-BR!2sbr"
-        width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-        tabindex="0"></iframe>
-    </div>  
-    <footer>
-      mockup layout
-    </footer>
-    <div class="bottom-footer">
-      <span>&copy;L.A. Logística. Todos os direitos reservados</span>  
+  <div class="container-all">
+    <div class="container-main">
+      <div class="header-info container">
+        <span>(13) 97405-0881</span>
+        <span>Rua Campos Melo, nº 157 - Cj 1409, Santos - SP</span>
+      </div>
+      <header class="container">
+        <h1 class="logo">
+          <img src="resources/img/logo.png">
+        </h1>
+        <div>Hmb</div>
+      </header>
+    </div>
+    <div class="sticky-footer">
+      <div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3646.3589187947027!2d-46.32204203530973!3d-23.9477450818586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce039eb070c3d5%3A0x9400d3dd4983c451!2sR.%20Campos%20Melo%2C%20157%20-%20Vila%20Matias%2C%20Santos%20-%20SP%2C%2011015-150!5e0!3m2!1spt-BR!2sbr!4v1600780410961!5m2!1spt-BR!2sbr"
+          width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+          tabindex="0"></iframe>
+      </div>  
+      <footer>
+        mockup layout
+      </footer>
+      <div class="bottom-footer">
+        <span>&copy;L.A. Logística. Todos os direitos reservados</span>  
+      </div>
     </div>
   </div>
 </body>
