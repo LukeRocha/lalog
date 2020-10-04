@@ -4,9 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>L.A. Logística</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="resources/css/normalize.min.css">
+  <style>
+    body {
+      font-family: Montserrat, sans-serif;
+      background: #f5f5f5;
+    }
+
+    .container {
+      padding: 5px;
+    }
+
+    .header-info {
+      background: rgb(138 170 32);
+      color: #fff;
+      display: flex;
+      flex-flow: column wrap;
+      text-align: right;
+      font-weight: bold;
+    }
+
+    header {
+      background: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 8px 6px -6px black;
+    }
+
+    header .logo {
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    header .logo img {
+      width: 100px;
+    }
+  </style>
 </head>
 <body>
-
+  <div class="header-info container">
+    <span>(13) 97405-0881</span>
+    <span>Rua Campos Melo, nº 157 - Cj 1409, Santos - SP</span>
+  </div>
+  <header class="container">
+    <h1 class="logo">
+      <img src="resources/img/logo.png">
+    </h1>
+    <div>Hmb</div>
+  </header>
 </body>
 </html>
