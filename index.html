@@ -50,22 +50,32 @@
       width: 100px;
     }
 
+    .presentation {
+      text-align: center;
+      display: flex;
+      flex-flow: column wrap;
+    }
+
+    .presentation span {
+      padding: 20px;
+    }
+
     .expertise-bg {
       background: rgb(138 170 32);
       display: flex;
       flex-flow: column nowrap;
-      justify-content: space-between;
+      justify-content: space-around;
     }
 
     .expertise-title {
-      text-align: start;
       color: white;
     }
 
-    .expertise-title h2{
+    .expertise-title h2 {
       text-align: center;
       font-size: 1.6em;
     }
+
     .carousel-container img {
       width: 90vw;
       height: 40vh;
@@ -97,6 +107,36 @@
       font-size: .8em;
       font-weight: bold;
     }
+
+    @media only screen and (min-width: 700px) {
+      header .logo img {
+      width: 200px;
+    }
+
+      .expertise-bg {
+        display: flex;
+        flex-flow: row nowrap;
+      }
+
+      .expertise-title {
+        width: 25vw;
+      }
+
+      .expertise-title h2 {
+        text-align: left;
+      }
+
+      .carousel-container {
+        width: 72vw;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .carousel-container img {
+        width: 20vw;
+        height: 30vh;
+      }
+    }
   </style>
 </head>
 
@@ -110,14 +150,24 @@
         <div>Hmb</div>
       </header>
     </div>
+    <div class="presentation container">
+      <h2>L.A. Logística</h2>
+      <span>"A linha entre a desordem e a ordem, está na logistica."</span>
+      <span>
+        Com estrutura e equipe operacional qualificada para realizar projetos e serviços de transporte, oferecemos
+        assessoria e consultoria completa no gerenciamento de cargas, onde a prioridade é a eficiência do transporte,
+        objetivando a máxima desoneração nos custos da operação.
+      </span>
+    </div>
     <div class="expertise-bg container">
-      <div class="expertise-title container">
+      <div class="expertise-title">
         <h2>Áreas de atuaçao</h2>
         <span>Temos a melhor estratégia para lidar com a demanda solicitada, tomando como responsabilidade majoritária a
           demanda do cliente</span>
       </div>
-      <div class="carousel-container container">
-        <img src="/resources/img/cabotagem.png">
+      <div class="carousel-container">
+        <div><img class='container' src="/resources/img/cabotagem.png">
+        </div>
       </div>
     </div>
     <div class="sticky-footer">
@@ -128,7 +178,7 @@
           tabindex="0"></iframe>
       </div>
       <footer class="container">
-        <a href="https://api.whatsapp.com/send?phone=5519999999999&text=Fale%20Conosco" target="_blank"
+        <a href="https://web.whatsapp.com/send?phone=5513974050881&text=Fale%20Conosco" target="_blank"
           style="position:fixed;bottom:20px;right:30px;">
           <svg enable-background="new 0 0 512 512" width="50" height="50" version="1.1" viewBox="0 0 512 512"
             xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
