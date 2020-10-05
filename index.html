@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="resources/css/normalize.min.css">
   <style>
-    html, body {
+    html,
+    body {
       height: 100%;
     }
 
@@ -52,8 +54,8 @@
       display: flex;
       flex-flow: column wrap;
       background: rgb(138 170 32);
-      padding: 20px ;
-      color: white;   
+      padding: 20px;
+      color: white;
       align-items: center;
       font-size: .9em;
     }
@@ -75,8 +77,21 @@
       font-weight: bold;
     }
 
+    .expertise-bg {
+      background: rgb(138 170 32);
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+
+    }
+
+    .expertise-title {
+      text-align: start;
+      color: white;
+    }
   </style>
 </head>
+
 <body>
   <div class="container-all">
     <div class="container-main">
@@ -87,23 +102,35 @@
         <div>Hmb</div>
       </header>
     </div>
+    <div class="expertise-bg container">
+      <div class="expertise-title container">
+        <h2>Áreas de atuaçao</h2>
+        <span>Temos a melhor estratégia para lidar com a demanda solicitada, tomando como responsabilidade majoritária a
+          demanda do cliente</span>
+      </div>
+      <div class="carousel container">
+        Carousel layout área
+      </div>
+    </div>
     <div class="sticky-footer">
       <div>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3646.3589187947027!2d-46.32204203530973!3d-23.9477450818586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce039eb070c3d5%3A0x9400d3dd4983c451!2sR.%20Campos%20Melo%2C%20157%20-%20Vila%20Matias%2C%20Santos%20-%20SP%2C%2011015-150!5e0!3m2!1spt-BR!2sbr!4v1600780410961!5m2!1spt-BR!2sbr"
           width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
           tabindex="0"></iframe>
-      </div>  
+      </div>
       <footer class="container">
         <span>(13) 97405-0881</span>
         <span>contato@lalog.com.br</span>
         <span>Rua Campos Melo, nº 157 - Cj 1409, Santos - SP</span>
-        <span><hr>Horário de atendimento: Segunda-feira à Sexta-feira, das 09:00 às 17:00</span>
+        <span>
+          <hr>Horário de atendimento: Segunda-feira à Sexta-feira, das 09:00 às 17:00</span>
       </footer>
       <div class="bottom-footer">
-        <span>&copy;L.A. Logística. Todos os direitos reservados</span>  
+        <span>&copy;L.A. Logística. Todos os direitos reservados</span>
       </div>
     </div>
   </div>
 </body>
+
 </html>
