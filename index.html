@@ -7,15 +7,26 @@
   <title>L.A. Logística</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="resources/css/normalize.min.css">
+  <link rel="stylesheet" href="/resources/scripts/animations.js">
   <style>
     html,
     body {
       height: 100%;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Montserrat, sans-serif;
       background: #f5f5f5;
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+      padding: 5px;
     }
 
     .container-all {
@@ -26,6 +37,9 @@
 
     .container-main {
       flex: 1;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
     .container {
@@ -50,17 +64,50 @@
       width: 100px;
     }
 
+    .scroll-links {
+      background-color: rgb(120 151 14);
+    }
+    .menu-content {
+      display: flex;
+      flex-flow: column wrap;
+    }
+
+    .presentation {
+      text-align: center;
+      display: flex;
+      flex-flow: column wrap;
+    }
+
+    .presentation span {
+      padding: 20px;
+    }
+
     .expertise-bg {
       background: rgb(138 170 32);
       display: flex;
       flex-flow: column nowrap;
-      justify-content: space-between;
-
+      justify-content: space-around;
     }
 
     .expertise-title {
-      text-align: start;
       color: white;
+    }
+
+    .expertise-text {
+        font-weight: bold;
+        color: white;
+        text-align: left;
+      }
+
+
+    .expertise-title h2 {
+      text-align: center;
+      font-size: 1.6em;
+    }
+
+    .carousel-container img {
+      width: 90vw;
+      height: 40vh;
     }
 
     footer {
@@ -89,6 +136,67 @@
       font-size: .8em;
       font-weight: bold;
     }
+
+    @media only screen and (min-width: 800px) {
+      a {
+        font-size: 1.8em;
+      }
+
+      header .logo img {
+        width: 200px;
+      }
+
+      .menu-content {
+        display: flex;
+        flex-flow: row wrap;
+      }
+
+      .menu-content a {
+        padding: 20px;
+      }
+
+      .presentation h2{
+        font-size: 2.4em;
+      }
+      .expertise-bg {
+        display: flex;
+        flex-flow: row nowrap;
+      }
+
+      .expertise-title {
+        width: 20vw;
+      }
+
+      .expertise-title h2 {
+        text-align: left;
+      }
+
+      .expertise-blocks {
+        text-align: left;
+        width: 20vw;
+      }
+
+      .expertise-text {
+        font-weight: bold;
+        color: white;
+        width: 20vw;
+        text-align: left;
+      }
+
+      .carousel-container {
+        max-width: 78vw;
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+        font-size: 1.1em;
+        text-align: left;
+      }
+
+      .carousel-container img {
+        width: 20vw;
+        height: 30vh;
+      }
+    }
   </style>
 </head>
 
@@ -99,19 +207,80 @@
         <h1 class="logo">
           <img src="resources/img/logo.png">
         </h1>
-        <div>Hmb</div>
+        <nav class="menu-content container">
+          <a href="#expertise">Áreas de atuaçao</a>
+          <a href="#footer">Fale conosco</a>
+        </nav>
       </header>
     </div>
+    <div class="presentation container">
+      <h2>L.A. Logística</h2>
+      <span>"A linha entre a desordem e a ordem, está na logistica."</span>
+      <span>
+        Com estrutura e equipe operacional qualificada para realizar projetos e serviços de transporte, oferecemos
+        assessoria e consultoria completa no gerenciamento de cargas, onde a prioridade é a eficiência do transporte,
+        objetivando a máxima desoneração nos custos da operação.
+      </span>
+    </div>
+    <a class="scroll-links" id="expertise"></a>
     <div class="expertise-bg container">
-      <div class="expertise-title container">
+      <div class="expertise-title">
         <h2>Áreas de atuaçao</h2>
         <span>Temos a melhor estratégia para lidar com a demanda solicitada, tomando como responsabilidade majoritária a
           demanda do cliente</span>
       </div>
-      <div class="carousel container">
-        Carousel layout área
+      <div class="carousel-container">
+        <div><img class='expertise-blocks container' src="/resources/img/cabotagem.png">
+          <div class='expertise-text container'>
+            <h2>Cabotagem</h2>
+            <span>Cabotagem é a navegação entre portos marítimos, sem perder a costa de vista. A
+              cabotagem contrapõe-se à navegação de longo curso, ou seja, aquela realizada entre portos de diferentes
+              nações. Há, a distinção entre cabotagem internacional e doméstica.</span>
+          </div>
+        </div>
+        <div><img class='container' src="/resources/img/redex.png">
+          <div class='expertise-text container'>
+            <h2>Redex</h2>
+            <span> Recinto Especial para Despacho Aduaneiro de Exportação. Redex (Recinto Especial para
+              Despacho Aduaneiro de Exportação) é um recinto de exportação não alfandegado de uso público, destinado à
+              movimentação de mercadorias para a exportação.</span>
+          </div>
+        </div>
+        <div><img class='container' src="/resources/img/terminais.png">
+          <div class='expertise-text container'>
+            <h2>Terminais</h2>
+            <span> Transporte implementado em terminais marítimos e rodoviários com uma experiente equipe de
+              profissionais qualificados que desenvolvem soluções
+              específicas para cada necessidade.</span>
+          </div>
+        </div>
+        <div><img class='expertise-blocks container' src="/resources/img/alimenticia.png">
+          <div class='expertise-text container'>
+            <h2>Indústria alimentícia</h2>
+            <span>Os veículos transportadores devem ser adequados conforme norma da ANVISA com atenção para paletes de
+              plástico forrando o assoalho, assoalhos sem ferrugem ou qualquer outra deterioração, contêiner isolado com
+              tampa para que nenhuma ferramenta entre em contato com o produto e etc.</span>
+          </div>
+        </div>
+        <div><img class='container' src="/resources/img/porto.png">
+          <div class='expertise-text container'>
+            <h2>Portos</h2>
+            <span>Os principais portos brasileiros são: o Porto de Santos, situado na cidade de Santos, no estado de São
+              Paulo. É o maior porto nacional e o mais movimentado da América Latina. Em seguida, o Porto de Paranaguá,
+              no estado do Paraná, é o segundo porto mais importante do país. </span>
+          </div>
+        </div>
+        <div><img class='container' src="/resources/img/frigorifico.png">
+          <div class='expertise-text container'>
+            <h2>Transporte frigorífico</h2>
+            <span>Durante o transporte é importante aplicar procedimentos para garantir que os alimentos cheguem fresco
+              e apropriados para o consumo do cliente final. Saber da qualidade e credibilidade da empresa que realiza o
+              transporte frigorífico produtos congelados Santos, garantindo a satisfação do público.</span>
+          </div>
+        </div>
       </div>
     </div>
+    <a class="scroll-links" id="footer"></a>
     <div class="sticky-footer">
       <div>
         <iframe
@@ -120,7 +289,17 @@
           tabindex="0"></iframe>
       </div>
       <footer class="container">
-        <span>(13) 97405-0881</span>
+        <a href="https://web.whatsapp.com/send?phone=5513974050881&text=Fale%20Conosco" target="_blank"
+          style="position:fixed;bottom:20px;right:30px;">
+          <svg enable-background="new 0 0 512 512" width="50" height="50" version="1.1" viewBox="0 0 512 512"
+            xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M256.064,0h-0.128l0,0C114.784,0,0,114.816,0,256c0,56,18.048,107.904,48.736,150.048l-31.904,95.104  l98.4-31.456C155.712,496.512,204,512,256.064,512C397.216,512,512,397.152,512,256S397.216,0,256.064,0z"
+              fill="#4CAF50" />
+            <path
+              d="m405.02 361.5c-6.176 17.44-30.688 31.904-50.24 36.128-13.376 2.848-30.848 5.12-89.664-19.264-75.232-31.168-123.68-107.62-127.46-112.58-3.616-4.96-30.4-40.48-30.4-77.216s18.656-54.624 26.176-62.304c6.176-6.304 16.384-9.184 26.176-9.184 3.168 0 6.016 0.16 8.576 0.288 7.52 0.32 11.296 0.768 16.256 12.64 6.176 14.88 21.216 51.616 23.008 55.392 1.824 3.776 3.648 8.896 1.088 13.856-2.4 5.12-4.512 7.392-8.288 11.744s-7.36 7.68-11.136 12.352c-3.456 4.064-7.36 8.416-3.008 15.936 4.352 7.36 19.392 31.904 41.536 51.616 28.576 25.44 51.744 33.568 60.032 37.024 6.176 2.56 13.536 1.952 18.048-2.848 5.728-6.176 12.8-16.416 20-26.496 5.12-7.232 11.584-8.128 18.368-5.568 6.912 2.4 43.488 20.48 51.008 24.224 7.52 3.776 12.48 5.568 14.304 8.736 1.792 3.168 1.792 18.048-4.384 35.52z"
+              fill="#FAFAFA" /></svg>
+        </a>
         <span>contato@lalog.com.br</span>
         <span>Rua Campos Melo, nº 157 - Cj 1409, Santos - SP</span>
         <span>
