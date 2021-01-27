@@ -22,23 +22,23 @@
         </h1>
         <nav class="menu-content container">
           <a href="#expertise" class="menu-buttons">Áreas de atuação</a>
-          <a href="#footer" class="menu-buttons">Fale conosco</a>
+          <a href="#footer" class="menu-buttons" >Fale conosco</a>
         </nav>
       </header>
     </div>
     <div class="presentation-bg">
-      <div class="presentation container">
-        <h2>L.A. Logística</h2>
-        <span>"A linha entre a desordem e a ordem, está na logistica."</span>
-        <span>
-          Com estrutura e equipe operacional qualificada para realizar projetos e serviços de transporte, oferecemos
-          assessoria e consultoria completa no gerenciamento de cargas, onde a prioridade é a eficiência do transporte,
-          objetivando a máxima desoneração nos custos da operação.
-        </span>
-      </div>
+    <div class="presentation container">
+      <h2>L.A. Logística</h2>
+      <span>"A linha entre a desordem e a ordem, está na logistica."</span>
+      <span>
+        Com estrutura e equipe operacional qualificada para realizar projetos e serviços de transporte, oferecemos
+        assessoria e consultoria completa no gerenciamento de cargas, onde a prioridade é a eficiência do transporte,
+        objetivando a máxima desoneração nos custos da operação.
+      </span>
     </div>
-
-    <div id ="expertise" class="expertise-bg container">
+  </div>
+  <a class="scroll-links" id="expertise"></a>
+    <div class="expertise-bg container">
       <div class="expertise-title">
         <h2>Áreas de atuação</h2>
         <span>Temos a melhor estratégia para lidar com a demanda solicitada, tomando como responsabilidade majoritária a
@@ -95,7 +95,8 @@
         </div>
       </div>
     </div>
-    <div id="footer" class="sticky-footer">
+    <a class="scroll-links" id="footer"></a>
+    <div class="sticky-footer">
       <div>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3646.3589187947027!2d-46.32204203530973!3d-23.9477450818586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce039eb070c3d5%3A0x9400d3dd4983c451!2sR.%20Campos%20Melo%2C%20157%20-%20Vila%20Matias%2C%20Santos%20-%20SP%2C%2011015-150!5e0!3m2!1spt-BR!2sbr!4v1600780410961!5m2!1spt-BR!2sbr"
@@ -103,8 +104,8 @@
           tabindex="0"></iframe>
       </div>
       <a href="https://api.whatsapp.com/send?phone=+5513974050881" target="_blank"
-        style="position:fixed;bottom:20px;right:30px;">
-        <img class="whatsapp" src="https://images.tcdn.com.br/static_inst/integracao/imagens/whatsapp.png" />
+        style="position:fixed;bottom:5px;right:14px;">
+        <img class="whatsapp" src="https://img.icons8.com/color/48/000000/whatsapp--v3.png" />
       </a>
       <footer class="container">
         <span>contato@lalog.com.br</span>
@@ -140,6 +141,21 @@
         ]
       });
     });
+
+    $('nav a').click(function(e){
+      e.preventDefault();
+      let id =$(this).attr("href"),
+      targetOffSet = $(id).offset().top;
+      // menuHeight = $('nav, a').innerHeight();
+      $('html, body').animate({
+        scrollTop: targetOffSet - 125
+      }, 200)
+
+      console.log(menuHeight)
+
+    })
+
+
   </script>
 </body>
 
