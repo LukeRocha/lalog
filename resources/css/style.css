@@ -69,8 +69,8 @@ header .logo img {
 .presentation-bg {
   background-image: url(/resources/img/body-bg.jpeg);
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
-  background-attachment: fixed;
 }
 .presentation {
   font-weight: bolder;
