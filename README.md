@@ -1,4 +1,3 @@
-<h1>LALOG :truck:</h1>
-<h3>// This is an old project of an enterprise that is no more functioning //</h3>
-<h2>This is a web static page, made with HTML, CSS, Slick Slider and javaScript</h2>
-<h3>see it on: https://lalog.netlify.app/</h3>
+# Lalog ([https://lalog.netlify.app/](https://lalog.netlify.app/))
+
+This was my first project as a developer, it is a static website, build with HTML, CSS and some vanilla JavaScript.
