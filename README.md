@@ -6,7 +6,7 @@ Setup
 ---
 
 Requirements:
-- Nodejs
+- Node.js
 
 Run the following commands:
 ```
